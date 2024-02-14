@@ -6,17 +6,9 @@ on:
   push:
     branches:
       - main
-    # only build when important files change
-    paths:
-      - 'src/**'
-      - '.github/workflows/**'
     tags:
       - 'v*.*.*'
   pull_request:
-    # only build when important files change
-    paths:
-      - 'src/**'
-      - '.github/workflows/**'
 
 jobs:
   docker-build:
