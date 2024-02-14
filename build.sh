@@ -13,7 +13,6 @@ wget -c https://gist.githubusercontent.com/straker/df855f22e57576c80d6126aa56096
 
 tree -H '.' \
     -L 1 \
-    --houtro "" \
     --noreport \
     --charset utf-8 \
     -I "index.html" \
