@@ -46,7 +46,9 @@ cat <<EOF > index.html
 EOF
 
 for file in *.html; do
-    echo "            <li class=\"list-group-item\"><a href=\"$file\">$(basename "$file" .html)</a></li>" >> index.html
+    if [ "$file" != "index.html" ]; then
+        echo "            <li class=\"list-group-item\"><a href=\"$file\">$(basename "$file" .html)</a></li>" >> index.html
+    fi
 done
 
 cat <<EOF >> index.html
